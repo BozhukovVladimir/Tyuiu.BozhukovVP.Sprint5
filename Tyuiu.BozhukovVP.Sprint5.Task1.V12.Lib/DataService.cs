@@ -6,30 +6,20 @@ namespace Tyuiu.BozhukovVP.Sprint5.Task1.V12.Lib
     {
         public string SaveToFileTextData(int startValue, int stopValue)
         {
-            string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask1.txt";
-
+            string path = $@"{Path.GetTempPath()}OutPutFileTask1.txt";
             FileInfo fileInfo = new FileInfo(path);
-            bool fileExists = fileInfo.Exists;
+            bool FileExists = fileInfo.Exists;
 
-            if (fileExists)
+            if (FileExists)
             {
                 File.Delete(path);
             }
-
             double y;
             string strY;
             for (int x = startValue; x <= stopValue; x++)
             {
-                if (Math.Sin(x) - 2 != 0)
-                {
-                    y = Math.Round((5 * x + 2.5) * Math.Pow((Math.Sin(x) - 2), -1) + 2, 2);
-                }
-                else
-                {
-                    y = 0;
-                }
+                y = Math.Round((5 * x + 2.5) / (Math.Sin(x) - 2) + 2, 2);
                 strY = Convert.ToString(y);
-
                 if (x != stopValue)
                 {
                     File.AppendAllText(path, strY + Environment.NewLine);
