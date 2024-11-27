@@ -20,7 +20,7 @@ namespace Tyuiu.BozhukovVP.Sprint5.Task0.V5
             Console.WriteLine("* до трёх знаков после запятой.                                           *");
             Console.WriteLine("* y = ln((x+1)/(x+2))                                                     *");
             Console.WriteLine("*                                                                         *");
-            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("**************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ                                                         *");
             Console.WriteLine("***************************************************************************");
             int x = 3;
