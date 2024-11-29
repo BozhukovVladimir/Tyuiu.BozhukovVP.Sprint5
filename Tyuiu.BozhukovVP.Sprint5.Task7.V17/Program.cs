@@ -20,17 +20,15 @@ namespace Tyuiu.BozhukovVP.Sprint5.Task7.V17
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
-
-            string path = $@"C:\DataSprint5\InPutDataFileTask7V17.txt";
-            string pathSaveFile = $@"C:\DataSprint5\InPutDataFileTask7V17.txt";
-            Console.WriteLine("Данные находятся в файле: " + path);
+            string path = Path.Combine(@"C:\DataSprint5", "InPutDataFileTask7V17.txt");
+            Console.WriteLine($"Данные находятся в файле: {path}");
 
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            pathSaveFile = ds.LoadDataAndSave(path);
-            Console.WriteLine(pathSaveFile);
+            Console.WriteLine("Находится в файле:");
+            Console.WriteLine(ds.LoadDataAndSave(path));
             Console.ReadKey();
         }
     }
