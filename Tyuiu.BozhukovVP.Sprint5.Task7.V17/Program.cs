@@ -25,7 +25,7 @@ namespace Tyuiu.BozhukovVP.Sprint5.Task7.V17
             string pathSaveFile = $@"C:\DataSprint5\InPutDataFileTask7V17.txt";
             Console.WriteLine("Данные находятся в файле: " + path);
 
-            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("**************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
